@@ -1,6 +1,6 @@
 
 
 <div *ngFor="let y of yulist">
-  {{y.name}}
+  <a routerLink="/patty/{{y.name}}">{{y.name}}</a>
   <img src="{{y.card_images[0].image_url_small}}" >
 </div>

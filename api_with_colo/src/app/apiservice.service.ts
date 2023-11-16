@@ -12,7 +12,11 @@ export class ApiserviceService {
 
    }
   yugilist() :Observable <Root>{
-    return this.http.get<Root>('https://db.ygoprodeck.com/api/v7/cardinfo.php?')
+    return this.http.get<Root>(`https://db.ygoprodeck.com/api/v7/cardinfo.php?`)
 
+  }
+  yugilist2(x:string| null) :Observable <Root>{
+  return this.http.get<Root>(`https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${x}`)
+  
   }
 }

@@ -23,8 +23,12 @@ export class AppComponent {
   ris = (data:any)=>{
     this.yulist=data.data
   }
+  vai(url:string){
+    const parts =url.split('/');
+    console.log(parts)
+    return parts.at(-2)
 
 }
 
-
+}
 
